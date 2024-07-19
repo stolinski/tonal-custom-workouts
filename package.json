@@ -1,42 +1,45 @@
 {
-	"name": "tonal-work",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"test": "npm run test:integration && npm run test:unit",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"test:integration": "playwright test",
-		"test:unit": "vitest"
-	},
-	"devDependencies": {
-		"@playwright/test": "^1.28.1",
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
-		"@typescript-eslint/eslint-plugin": "^5.45.0",
-		"@typescript-eslint/parser": "^5.45.0",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte": "^2.30.0",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.10.1",
-		"svelte": "^4.0.5",
-		"svelte-check": "^3.4.3",
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0",
-		"vite": "^4.4.2",
-		"vitest": "^0.32.2"
-	},
-	"type": "module",
-	"dependencies": {
-		"@supabase/auth-helpers-sveltekit": "^0.10.2",
-		"@supabase/auth-ui-shared": "^0.1.6",
-		"@supabase/auth-ui-svelte": "^0.2.2",
-		"@supabase/supabase-js": "^2.33.1"
-	}
+  "dependencies": {
+    "@drop-in/theme": "workspace:^",
+    "@drop-in/toast": "workspace:^",
+    "pocketbase": "^0.21.3"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.2.2",
+    "@sveltejs/kit": "^2.5.18",
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "pocketbase-typegen": "^1.2.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.6",
+    "svelte": "5.0.0-next.191",
+    "svelte-check": "^3.8.4",
+    "svelte-preprocess": "^6.0.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "engines": {
+    "node": "<20.11.1"
+  },
+  "name": "tonal",
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "vite dev",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
+    "make-package": "node ./src/packages/@drop-in/tools/package.js",
+    "package": "svelte-kit package",
+    "prepare": "svelte-kit sync",
+    "preview": "svelte-kit preview",
+    "types": "pocketbase-typegen --env --out ./src/types/pocketbase.ts"
+  },
+  "type": "module",
+  "version": "0.0.4",
+  "workspaces": [
+    "src/packages/**"
+  ]
 }

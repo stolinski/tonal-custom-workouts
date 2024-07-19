@@ -1,17 +1,17 @@
-// src/app.d.ts
+/// <reference types="@sveltejs/kit" />
+import type { TypedPocketBase, UsersResponse } from './types/pocket-types'
 
-import { SupabaseClient, Session } from '@supabase/supabase-js';
-
+// See https://kit.svelte.dev/docs/types#app
+// for information about these interfaces
+// and what to do when importing types
 declare global {
 	namespace App {
 		interface Locals {
-			supabase: SupabaseClient;
-			getSession(): Promise<Session | null>;
+			pb: TypedPocketBase
+			user: UsersResponse | undefined
 		}
-		interface PageData {
-			session: Session | null;
-		}
-		// interface Error {}
 		// interface Platform {}
+		// interface Session {}
+		// interface Stuff {}
 	}
 }

@@ -1,29 +1,19 @@
-<!-- src/routes/+layout.svelte -->
 <script lang="ts">
-	import '../styles.css';
-	import { invalidate } from '$app/navigation';
-	import { onMount } from 'svelte';
+	import "@drop-in/theme";
+	import { Toast, toast } from '@drop-in/toast';
+	let { children } = $props()
 
-	export let data;
-
-	let { supabase, session } = data;
-	$: ({ supabase, session } = data);
-
-	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((event, _session) => {
-			if (_session?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
-
-		return () => data.subscription.unsubscribe();
-	});
 </script>
 
-<svelte:head>
-	<title>User Management</title>
-</svelte:head>
+<!-- If you would like to use the same layout in app and site, use this file -->
+{@render children()}
 
-<div class="container" style="padding: 50px 0 100px 0">
-	<slot />
-</div>
+<!--  
+SickToast -> just use any of these methods
+<button onclick={() => toast.send('Test Toast', {duration: 5000})}>Test Toast</button>
+<button onclick={() => toast.warning('Test Toast')}>Test Toast</button>
+<button onclick={() => toast.error('Test Toast')}>Test Toast</button>
+<button onclick={() => toast.success('Test Toast')}>Test Toast</button>
+<button onclick={() => toast.info('Test Toast')}>Test Toast</button>
+-->
+<Toast position={{ inline: 'end', block: 'end' }} offset={{ inline: '20px', block: '20px' }} />
