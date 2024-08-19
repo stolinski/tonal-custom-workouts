@@ -1,14 +1,5 @@
 # Custom Workouts for Tonal
 
-## Getting Started
+Built with @drop-in
 
-You will need a pocketbase installation
-
-1. `pnpm install`
-2. `pnpn dev`
-
-## Generating Types
-
-Did you change the schema?
-
-Run `pnpm types`
+A custom workout sharing app for Tonal.

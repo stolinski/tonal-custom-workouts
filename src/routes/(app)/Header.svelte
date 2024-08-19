@@ -16,13 +16,16 @@
 
 <style>
 	header {
-		border-bottom: 1px solid #eee;
 		padding: 15px 10px;
 		div {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 		}
+		a {
+			text-decoration: none;
+		}
+
 		p {
 			margin: 0;
 		}

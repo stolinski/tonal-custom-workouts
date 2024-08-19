@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { UsersResponse } from '$/pocket-types';
 	import { users } from '$/pocketbase';
+	import type { UsersResponse } from '$/types/pocketbase';
 	const { user }: { user: UsersResponse } = $props();
 
 	let verified_sent = $state(false);
@@ -15,7 +15,7 @@
 	{#if !verified_sent}
 		<p>
 			Your email is not verified.
-			<button class="btn-small" {onclick}> Send Verification </button>
+			<button class="btn-small button" {onclick}> Send Verification </button>
 		</p>
 	{:else}
 		<p>Verification email sent to {user.email}. Please check your email.</p>
@@ -33,5 +33,6 @@
 	}
 	button {
 		display: inline-block;
+		margin: 0;
 	}
 </style>

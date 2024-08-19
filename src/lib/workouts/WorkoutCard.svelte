@@ -19,9 +19,10 @@
 		--bottom-left: var(--green);
 		text-decoration: none;
 		display: block;
-		border-radius: 5px;
+		border-radius: 6px;
 		overflow: hidden;
 		border: 4px solid rgb(255 255 255 / 0.1);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 		color: white;
 		box-shadow:
 			rgba(17, 17, 26, 0.05) 0px 1px 0px,
@@ -70,7 +71,7 @@
 	}
 
 	p {
-		font-size: var(--fs-xxs);
+		font-size: var(--fs-xs);
 		margin-bottom: 0;
 	}
 </style>

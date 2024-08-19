@@ -1,7 +1,16 @@
 <script lang="ts">
+	import { queryParam } from 'sveltekit-search-params';
+
+	import Pill from '$/lib/Pill.svelte';
 	import WorkoutCard from '$/lib/workouts/WorkoutCard.svelte';
 
+	const level = queryParam('level');
+
 	let { data } = $props();
+
+	function reset_level() {
+		level.set('');
+	}
 </script>
 
 <section>
@@ -15,6 +24,10 @@
 	</div>
 
 	<!-- TODOs Filters, Sort, Search -->
+	{#if data.level}
+		<Pill onclick={reset_level}>× {data.level}</Pill>
+	{/if}
+
 	<div class="workout-grid grid">
 		{#each data.workouts as workout}
 			<WorkoutCard {workout} />

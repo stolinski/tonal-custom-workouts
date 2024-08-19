@@ -1,8 +1,8 @@
 <footer class="layout">
 	<p>&copy; {new Date().getFullYear()} Custom Workouts for Tonal</p>
-	<ul>
+	<!-- <ul>
 		<li><a href="/">Home</a></li>
-	</ul>
+	</ul> -->
 </footer>
 
 <style>
