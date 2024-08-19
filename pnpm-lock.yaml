@@ -14,6 +14,9 @@ importers:
       '@drop-in/toast':
         specifier: workspace:^
         version: link:src/packages/toast
+      '@sveltejs/adapter-static':
+        specifier: ^3.0.4
+        version: 3.0.4(@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.225)(vite@5.4.1))(svelte@5.0.0-next.225)(vite@5.4.1))
       pocketbase:
         specifier: ^0.21.4
         version: 0.21.4
@@ -383,6 +386,11 @@ packages:
 
   '@sveltejs/adapter-auto@3.2.4':
     resolution: {integrity: sha512-a64AKYbfTUrVwU0xslzv1Jf3M8bj0IwhptaXmhgIkjXspBXhD0od9JiItQHchijpLMGdEDcYBlvqySkEawv6mQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.0.0
+
+  '@sveltejs/adapter-static@3.0.4':
+    resolution: {integrity: sha512-Qm4GAHCnRXwfWG9/AtnQ7mqjyjTs7i0Opyb8H2KH9rMR7fLxqiPx/tXeoE6HHo66+72CjyOb4nFH3lrejY4vzA==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -1940,6 +1948,10 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.225)(vite@5.4.1))(svelte@5.0.0-next.225)(vite@5.4.1)
       import-meta-resolve: 4.1.0
+
+  '@sveltejs/adapter-static@3.0.4(@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.225)(vite@5.4.1))(svelte@5.0.0-next.225)(vite@5.4.1))':
+    dependencies:
+      '@sveltejs/kit': 2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.225)(vite@5.4.1))(svelte@5.0.0-next.225)(vite@5.4.1)
 
   '@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.225)(vite@5.4.1))(svelte@5.0.0-next.225)(vite@5.4.1)':
     dependencies:
