@@ -2,6 +2,7 @@
 	"dependencies": {
 		"@drop-in/theme": "workspace:^",
 		"@drop-in/toast": "workspace:^",
+		"@sveltejs/adapter-node": "^5.2.2",
 		"@sveltejs/adapter-static": "^3.0.4",
 		"pocketbase": "^0.21.4",
 		"qrcode": "^1.5.4"
