@@ -1,5 +1,6 @@
 {
 	"dependencies": {
+		"@drop-in/decks": "0.0.1",
 		"@drop-in/theme": "workspace:^",
 		"@drop-in/toast": "workspace:^",
 		"@sveltejs/adapter-node": "^5.2.2",

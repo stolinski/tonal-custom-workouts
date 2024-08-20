@@ -24,10 +24,13 @@
 		}
 		a {
 			text-decoration: none;
+			color: var(--fg);
 		}
 
 		p {
 			margin: 0;
+			font-weight: 700;
+			text-align: center;
 		}
 	}
 </style>

@@ -156,6 +156,12 @@ button,
 textarea,
 select {
 	font: inherit;
+	width: 100%;
+	max-width: 600px;
+}
+
+textarea {
+	height: 300px;
 }
 
 /* Utils */
@@ -294,20 +300,16 @@ label {
 button {
 	align-items: center;
 	appearance: none;
-	background-color: #3eb2fd;
-	background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
-	background-size: calc(100% + 20px) calc(100% + 20px);
-	border-radius: 10px;
+	background-color: var(--fg);
+	border-radius: 30px;
 	border-width: 0;
-	box-shadow: none;
+	font-weight: 700;
+	text-transform: uppercase;
 	box-sizing: border-box;
-	color: #ffffff;
+	color: var(--bg);
 	cursor: pointer;
 	display: inline-flex;
-	font-size: 1rem;
-	height: auto;
 	justify-content: center;
-	line-height: 1.5;
 	padding: 6px 20px;
 	position: relative;
 	text-align: center;
@@ -321,6 +323,19 @@ button {
 	touch-action: manipulation;
 	vertical-align: top;
 	white-space: nowrap;
+}
+
+.ghost {
+	background: transparent;
+	border: solid 1px var(--fg);
+	color: var(--fg);
+}
+
+.blank {
+	background: transparent;
+	color: var(--fg);
+	border-radius: 4px;
+	text-transform: none;
 }
 
 .button:active,

@@ -11,8 +11,18 @@
 		<h1>{data.workout.name}</h1>
 
 		<p>{data.workout.description}</p>
+		<p>{data.workout.long_description}</p>
 
-		<a class="button" href={data.workout.link}>Get this workout</a>
+		<div class="actions">
+			<a class="button" href={data.workout.link}>Get this workout</a>
+			<button class="ghost">Bookmark</button>
+		</div>
 		<QR link={data.workout.link} />
 	</div>
 </section>
+
+<style>
+	.actions {
+		margin-bottom: 2rem;
+	}
+</style>

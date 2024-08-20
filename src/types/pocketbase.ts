@@ -37,6 +37,7 @@ export type AuthSystemFields<T = never> = {
 export type UsersRecord = {
 	avatar?: string
 	name?: string
+	saved?: RecordIdString[]
 	tonal_username?: string
 }
 
@@ -56,6 +57,7 @@ export type WorkoutsRecord = {
 	group?: WorkoutsGroupOptions
 	level?: WorkoutsLevelOptions
 	link?: string
+	long_description?: string
 	name?: string
 	rating?: number
 	user: RecordIdString

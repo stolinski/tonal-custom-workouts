@@ -61,17 +61,22 @@
 
 	article {
 		border-radius: 1px;
+		aspect-ratio: 16 / 8;
 		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		background: linear-gradient(-45deg, var(--top-right), var(--bottom-left));
+		position: relative;
 	}
 
 	h2 {
-		margin-top: 0;
-		font-size: var(--fs-base);
+		margin: 0;
+		font-size: var(--fs-m);
 	}
 
 	p {
-		font-size: var(--fs-xs);
+		font-size: var(--fs-base);
 		margin-bottom: 0;
 	}
 </style>

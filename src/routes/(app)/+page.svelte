@@ -3,6 +3,7 @@
 
 	import Pill from '$/lib/Pill.svelte';
 	import WorkoutCard from '$/lib/workouts/WorkoutCard.svelte';
+	import { Menu } from '@drop-in/decks';
 
 	const level = queryParam('level');
 
@@ -24,6 +25,20 @@
 	</div>
 
 	<!-- TODOs Filters, Sort, Search -->
+	 <!-- TODO Search via syntax search -->
+	 <!-- <search>
+		 <input type="text" placeholder="Search...">
+		</search> -->
+		<div class="flex">
+	Filters: <Menu name="level-filter" button_class="ghost">
+		{#snippet button()}
+				Level
+		{/snippet}
+		<button class="blank" onclick={() => level.set('beginner')}>Beginner</button>
+		<button class="blank" onclick={() => level.set('intermediate')}>Intermediate</button>
+		<button class="blank" onclick={() => level.set('advanced')}>Advanced</button>
+	</Menu>
+	</div>
 	{#if data.level}
 		<Pill onclick={reset_level}>× {data.level}</Pill>
 	{/if}

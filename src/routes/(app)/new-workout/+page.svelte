@@ -8,12 +8,12 @@
 		group: 'full_body' as 'full_body' | 'lower_body' | 'upper_body',
 		length: 0,
 		description: '',
+		long_description: '',
 		user: pb.authStore.model?.id,
 	});
 
 	function create_workout(e: Event) {
 		e.preventDefault();
-		console.log(form_data);
 		pb.collection('workouts').create<WorkoutsRecord>(form_data);
 	}
 </script>
@@ -42,10 +42,24 @@
 		<input type="number" name="length" id="length" bind:value={form_data.length} />
 	</div>
 	<div>
-		<label for="description">Description</label>
-		<textarea name="description" id="description" bind:value={form_data.description}></textarea>
+		<label for="description">Short Description</label>
+		<input
+			name="description"
+			id="description"
+			placeholder="Used on listing page"
+			bind:value={form_data.description}
+		/>
 	</div>
 	<div>
+		<label for="description">Long Description</label>
+		<textarea
+			name="long_description"
+			id="long_description"
+			placeholder="Fill in anything the lifter might want to know"
+			bind:value={form_data.long_description}
+		></textarea>
+	</div>
+	<div class="button-container">
 		<button type="submit">Add Workout</button>
 	</div>
 </form>
@@ -55,3 +69,14 @@
 	This is a non-official web app that is not affiliated with Tonal. While we are working to get auto
 	importing working, for now we need to do enter your own workouts.
 </details>
+
+<style>
+	.button-container {
+		background: var(--bg);
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 1rem;
+	}
+</style>
