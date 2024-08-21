@@ -6,6 +6,7 @@
 		name: '',
 		link: '',
 		group: 'full_body' as 'full_body' | 'lower_body' | 'upper_body',
+		level: 'advanced' as 'beginner' | 'intermediate' | 'advanced',
 		length: 0,
 		description: '',
 		long_description: '',
@@ -35,6 +36,14 @@
 			<option value="full_body">Full Body</option>
 			<option value="lower_body">Lower Body</option>
 			<option value="upper_body">Upper Body</option>
+		</select>
+	</div>
+	<div>
+		<label for="level">Level</label>
+		<select name="level" id="level" bind:value={form_data.level}>
+			<option value="beginner">Beginner</option>
+			<option value="intermediate">Intermediate</option>
+			<option value="advanced">Advanced</option>
 		</select>
 	</div>
 	<div>
@@ -69,14 +78,3 @@
 	This is a non-official web app that is not affiliated with Tonal. While we are working to get auto
 	importing working, for now we need to do enter your own workouts.
 </details>
-
-<style>
-	.button-container {
-		background: var(--bg);
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 1rem;
-	}
-</style>
