@@ -61,11 +61,11 @@
 
 	article {
 		border-radius: 1px;
-		aspect-ratio: 16 / 8;
+		height: 100%;
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: space-between;
 		background: linear-gradient(-45deg, var(--top-right), var(--bottom-left));
 		position: relative;
 	}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import "@drop-in/theme";
+	import "../drop-in.css"
 	import { Toast, toast } from '@drop-in/toast';
 	let { children } = $props()
 
